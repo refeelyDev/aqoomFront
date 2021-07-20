@@ -1,0 +1,142 @@
+@import "./mixin.scss";
+
+@include mobile {
+  .features_container {
+    margin: 0 auto 100px;
+    text-align: center;
+    .features_interaction > img:nth-child(6), .features_moderation > img:nth-child(6) {
+        width: 100%;
+    }
+    .session_title {
+      color: #1c62f9;
+      font-size: 60px;
+      font-family: "futura-pt-bold";
+      margin: 10px 0;
+    }
+    .session_desc {
+      font-size: 16px;
+      font-family: "muli-regular";
+      color: #333132;
+    }
+    .session_desc:nth-child(1) {
+      font-size: 22px;
+    }
+    img {
+      display: block;
+      margin: 40px auto 0;
+    }
+    a {
+      background: #1c62f9;
+      border-radius: 18px;
+      box-shadow: 0px 3px 6px #00000029;
+      color: #fff;
+      font-family: "muli-bold";
+      font-size: 14px;
+      text-align: center;
+      line-height: 34px;
+      height: 35px;
+      width: 138px;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      margin: 0 auto 20px;
+    }
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        margin: 5px 0;
+      }
+    }
+    .check_icon {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background: url(../../img/blue_check.svg);
+      background-size: contain;
+      margin-right: 20px;
+    }
+    .foot_desc {
+      font-size: 32px;
+      font-family: "muli-bold";
+      margin: 20px auto;
+    }
+  }
+}
+
+@include desktop {
+  .features_container {
+    width: 681px;
+    margin: 0 auto 100px;
+    text-align: center;
+    .session_title {
+      color: #1c62f9;
+      font-size: 60px;
+      font-family: "futura-pt-bold";
+      margin: 10px 0;
+    }
+    .session_desc {
+      font-size: 16px;
+      font-family: "muli-regular";
+      color: #333132;
+    }
+    .session_desc:nth-child(1) {
+      font-size: 22px;
+    }
+    img {
+      display: block;
+      margin: 40px auto 0;
+    }
+    a {
+      background: #1c62f9;
+      border-radius: 18px;
+      box-shadow: 0px 3px 6px #00000029;
+      color: #fff;
+      font-family: "muli-bold";
+      font-size: 14px;
+      text-align: center;
+      line-height: 34px;
+      height: 35px;
+      width: 138px;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      margin: 0 auto 20px;
+    }
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        margin: 5px 0;
+      }
+    }
+    .check_icon {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background: url(../../img/blue_check.svg);
+      background-size: contain;
+      margin-right: 20px;
+    }
+    .foot_desc {
+      font-size: 32px;
+      font-family: "muli-bold";
+      width: 510px;
+      margin: 20px auto;
+    }
+  }
+}

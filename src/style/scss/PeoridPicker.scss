@@ -1,0 +1,58 @@
+.changable_peorid_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+    span {
+        font-size: 12px;
+    }
+    .date_from, .date_to {
+        width: 110px;
+        height: 34px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 10px;
+        color: #8d8d8d;
+        font-size: 12px;
+        text-align: center;
+        line-height: 34px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .picker_datefrom {
+        display: none;
+        position: absolute;
+        top: 50px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        z-index: 999;
+        &.open {
+            display: block;
+        }
+    }
+    .picker_dateto {
+        display: none;
+        position: absolute;
+        top: 50px;
+        background: #fff;
+        box-shadow: 0px 3px 6px #00000029;
+        z-index: 999;
+        &.open {
+            display: block;
+        }
+    }
+    .confirm_peorid {
+        width: 45px;
+        height: 35px;
+        background: #1C62F9 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 18px;
+        text-align: center;
+        line-height: 35px;
+        color: white;
+        font-style: 14px;
+        cursor: pointer;
+    }
+}

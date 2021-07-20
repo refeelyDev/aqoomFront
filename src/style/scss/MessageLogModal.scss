@@ -1,0 +1,31 @@
+.message_log_modal {
+    width: 700px;
+    height: 400px;
+    border-radius: 10px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #0000000D;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 20px;
+    .message_modal_title {
+        font-family: 'muli-bold';
+        margin: 0;
+    }
+    .message_modal_close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        font-size: 40px;
+        color: red;
+    }
+    .content_tab {
+        overflow-y: scroll;
+        height: 350px;
+    }
+    &.open {
+        display: block;
+    }
+}

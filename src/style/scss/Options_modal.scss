@@ -1,0 +1,57 @@
+.options_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 300px;
+    background: white;
+    box-shadow: 2px 2px 20px #000000a6;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.hidden {
+        display: none;
+    }
+    .close_window {
+        position: absolute;
+        color: red;
+        top: 0;
+        right: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .set_options {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .filter_group {
+          margin: 10px 0;
+          &:hover > .filter_label {
+            background: #909090;
+            border: solid 1px rgb(15, 15, 15);
+          }
+          .filter_label {
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border-radius: 5px;
+            border: solid 1px #707070;
+            transition: all 0.5s;
+            position: absolute;
+            margin-left: 10px;
+          }
+          .option_item {
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            position: absolute;
+            &:checked + .filter_label {
+              background: #707070;
+            }
+          }
+        }
+      }
+}

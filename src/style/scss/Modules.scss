@@ -1,0 +1,88 @@
+.section_title {
+    margin-left: 20px;
+}
+
+.modules_list_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+    .module_item {
+        width: 25%;
+        height: 185px;
+        border-radius: 4px;
+        margin: 20px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        box-shadow: 0 5px 7px #00000029;
+        background: #fff;
+        .module_title {
+            p {
+                font-size: 1.3rem;
+                font-weight: bold;
+                margin: 10px 0 0 0;
+            }
+        }
+        .module_content {
+            font-size: 0.8rem;
+        }
+        a {
+            position: absolute;
+            width: 170px;
+            height: 35px;
+            color: white;
+            background: #1C62F9;
+            border: solid 1px #1C62F9;
+            text-align: center;
+            font-size: 0.8rem;
+            text-decoration: none;
+            line-height: 35px;
+            bottom: 20px;
+            font-weight: bold;
+        }
+        .disable_btn_wrap {
+            position: absolute;
+            right: 66px;
+            top: 20px;
+            .filter_group {
+                .filter_label {
+                    width: 49px;
+                    height: 20px;
+                    border-radius: 20px;
+                    background: #707070;
+                    position: absolute;
+                    border: 1px solid #70707083;
+                    transition: all 0.5s ease;
+                }
+                .filter_circle {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background: linear-gradient(#ffffff, #FCFCFC);
+                    border: solid 1px #DEDFDF;
+                    box-shadow: 0px 1px 3px #0000001A;
+                    position: absolute;
+                    right: -23px;
+                    top: 1px;
+                    transition: transform 0.3s ease-out;
+                }
+                input {
+                    width: 1px; height: 1px;
+                    opacity: 0;
+                    position: absolute;
+                    &:checked + .filter_label {
+                        background: #2FC01D;
+                    }
+                    &:checked ~ .filter_circle {
+                        transform: translateX(25px);
+                    }
+                }
+            }
+        }
+        
+    }
+}

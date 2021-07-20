@@ -1,0 +1,27 @@
+@import "./mixin.scss";
+
+@include mobile {
+    .right_drawer_m {
+        display: block;
+        margin: 10px 0;
+        .nav_contents {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            align-content: center;
+            i.icon {
+                color: #333132;
+                width: 25px;
+                height: 25px;
+            }
+        }
+        
+    }
+}
+
+@include desktop {
+    .right_drawer_m {
+        display: none;
+    }
+}

@@ -1,0 +1,51 @@
+@import "./mixin.scss";
+
+@include mobile {
+    .analystic_section {
+        .chart_total_message_wrap, .chart_inactive_user_wrap, .chart_community_member_wrap, .chart_bot_activities_wrap {
+            background: #FCFCFC 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 20px #0000000D;
+            padding: 20px;
+            margin: 20px 0;
+            overflow: scroll;
+            h5 {
+                font-size: 18px;
+                margin: 0;
+                font-family: 'muli-bold';
+            }
+            p {
+                font-size: 10px;
+                margin: 0;
+                font-family: 'muli-light';
+                margin-bottom: 20px;
+            }
+            .chart_canvas_wrap {
+                width: 1298px;
+                overflow: scroll;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .analystic_section {
+        .chart_total_message_wrap, .chart_inactive_user_wrap, .chart_community_member_wrap, .chart_bot_activities_wrap {
+            width: 1298px;
+            background: #FCFCFC 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 20px #0000000D;
+            padding: 20px;
+            margin: 20px 0;
+            h5 {
+                font-size: 18px;
+                margin: 0;
+                font-family: 'muli-bold';
+            }
+            p {
+                font-size: 10px;
+                margin: 0;
+                font-family: 'muli-light';
+                margin-bottom: 20px;
+            }
+        }
+    }    
+}

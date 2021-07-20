@@ -1,0 +1,326 @@
+@import "./mixin.scss";
+
+@mixin custom_checkbox($offsetX, $offsetY) {
+    .filter_switch {
+        width: 20%;
+        position: relative;
+          
+        .custom_chbox {
+            width: 51px;
+            height: 15px;
+            background: #9D9D9D 0% 0% no-repeat padding-box;
+            border-radius: 12px;
+            opacity: 0.2;
+            display: inline-block;
+        }
+        .custom_chbox_circle {
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            background: #E9E9E9 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            position: absolute;
+            left: $offsetX;
+            top: $offsetY;
+            transition: transform 0.5s ease-out, color 0.7s ease;
+        }
+        .anti_filter {
+            width: 0.1px; height: 0.1px;
+            position: absolute;
+            opacity: 0;
+            &:checked ~ .custom_chbox_circle {
+                transform: translateX(20px);
+                background: #1C62F9 0% 0% no-repeat padding-box;
+            }
+            &:checked ~ .custom_chbox {
+                background: #1C62F9 0% 0% no-repeat padding-box;
+                opacity: 0.2;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .antispam_section {
+        .section_title {
+            font-size: 34px;
+            margin: 0 0 30px 0;
+        }
+        .anti_options, .restriction_messages {
+            background: #FCFCFC 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 20px #0000000D;
+            width: 95%;
+            padding: 30px;
+            h5 {
+                font-family: 'muli-bold';
+                font-size: 18px;
+                color: #333132;
+                margin: 0;
+            }
+            > p {
+                font-size: 14px;
+                color: #8D8D8D;
+                margin: 5px 0;
+            }
+            .filters {
+                display: table;
+                width: 100%;
+                .filter_row {
+                    display: table-row;
+                    height: 50px;
+                    > p, > div {
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: left;
+                        padding: 10px;
+                    }
+                    .filter_field {
+                        width: 7%;
+                        color: #333132;
+                        font-family: 'muli-bold';
+                        font-size: 14px;
+                    }
+                    
+                    @include custom_checkbox(13px, 13px);    
+                    
+                }
+            }
+            .restriction_module {
+                margin: 20px 0;
+                @include custom_checkbox(3px, -3px);
+                &.disable_slash_module {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    & .restriction_title_wrap {
+                        margin-right: 100px;
+                    }
+                }
+                h6 {
+                    color: #333132;
+                    font-size: 16px;
+                    font-family: 'muli-bold';
+                    margin: 0;
+                    
+                }
+                p {
+                    font-size: 12px;
+                    margin: 5px 0;
+                    color: #8d8d8d;
+                    
+                }
+                .restriction_content {
+                    margin: 10px 0;
+                    .blacklist_words {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin: 10px 0;
+                        .blacklist_item, .whitelisturl_item, .whitelistuser_item {
+                            width: 69px;
+                            height: 26px;
+                            background: rgba(157, 157, 157, 0.123) 0% 0% no-repeat padding-box;
+                            border-radius: 13px;
+                            position: relative;
+                            text-align: left;
+                            margin: 0 3px;
+                            p {
+                                color: #8D8D8D;
+                                margin: 0 12px;
+                                background: transparent;
+                                font-size: 11px;
+                                line-height: 24px;
+                            }
+                            .del_icon {
+                                position: absolute;
+                                width: 24px; height: 24px;
+                                border-radius: 50%;
+                                background: transparent;
+                                right: 0;
+                                top: 0;
+                                color: #8d8d8d;
+                                line-height: 21px;
+                                text-align: center;
+                                cursor: pointer;
+                                &:hover {
+                                    background: rgba(204, 9, 6, 0.205);
+                                    color: white;
+                                }
+                            }
+                        }
+                        .whitelisturl_item, .whitelistuser_item {
+                            width: 120px;
+                        }
+                    }
+                    input {
+                        height: 34px;
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 10px;
+                        padding: 0 20px;
+                        border: none;
+                    }
+                    a {
+                        width: 71px;
+                        height: 35px;
+                        background: #1C62F9 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 18px;
+                        color: white;
+                        font-size: 14px;
+                        margin-left: 20px;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 34px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .antispam_section {
+        .section_title {
+            font-size: 34px;
+            margin: 0 0 30px 0;
+        }
+        .anti_options, .restriction_messages {
+            background: #FCFCFC 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 20px #0000000D;
+            width: 95%;
+            padding: 30px;
+            h5 {
+                font-family: 'muli-bold';
+                font-size: 18px;
+                color: #333132;
+                margin: 0;
+            }
+            > p {
+                font-size: 14px;
+                color: #8D8D8D;
+                margin: 5px 0;
+            }
+            .filters {
+                display: table;
+                width: 100%;
+                .filter_row {
+                    display: table-row;
+                    height: 50px;
+                    > p, > div {
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: left;
+                        padding: 10px;
+                    }
+                    .filter_field {
+                        width: 7%;
+                        color: #333132;
+                        font-family: 'muli-bold';
+                        font-size: 14px;
+                    }
+                    
+                    @include custom_checkbox(13px, 13px);    
+                    
+                }
+            }
+            .restriction_module {
+                margin: 20px 0;
+                @include custom_checkbox(3px, -3px);
+                &.disable_slash_module {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    & .restriction_title_wrap {
+                        margin-right: 100px;
+                    }
+                }
+                h6 {
+                    color: #333132;
+                    font-size: 16px;
+                    font-family: 'muli-bold';
+                    margin: 0;
+                    
+                }
+                p {
+                    font-size: 12px;
+                    margin: 5px 0;
+                    color: #8d8d8d;
+                    
+                }
+                .restriction_content {
+                    margin: 10px 0;
+                    .blacklist_words {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin: 10px 0;
+                        .blacklist_item, .whitelisturl_item, .whitelistuser_item {
+                            width: 69px;
+                            height: 26px;
+                            background: rgba(157, 157, 157, 0.123) 0% 0% no-repeat padding-box;
+                            border-radius: 13px;
+                            position: relative;
+                            text-align: left;
+                            margin: 0 3px;
+                            p {
+                                color: #8D8D8D;
+                                margin: 0 12px;
+                                background: transparent;
+                                font-size: 11px;
+                                line-height: 24px;
+                            }
+                            .del_icon {
+                                position: absolute;
+                                width: 24px; height: 24px;
+                                border-radius: 50%;
+                                background: transparent;
+                                right: 0;
+                                top: 0;
+                                color: #8d8d8d;
+                                line-height: 21px;
+                                text-align: center;
+                                cursor: pointer;
+                                &:hover {
+                                    background: rgba(204, 9, 6, 0.205);
+                                    color: white;
+                                }
+                            }
+                        }
+                        .whitelisturl_item, .whitelistuser_item {
+                            width: 120px;
+                        }
+                    }
+                    input {
+                        width: 497px;
+                        height: 34px;
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 10px;
+                        padding: 0 20px;
+                        border: none;
+                    }
+                    a {
+                        width: 71px;
+                        height: 35px;
+                        background: #1C62F9 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 6px #00000029;
+                        border-radius: 18px;
+                        color: white;
+                        font-size: 14px;
+                        margin-left: 20px;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 34px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+

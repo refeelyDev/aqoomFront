@@ -1,0 +1,94 @@
+@import "./mixin.scss";
+
+@include mobile {
+    .section_header {
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      .header_logo {
+        /* background: url(./img/AQOOM_logo.png) no-repeat; */
+        background: url(../../img/aqoom_beta_logo.svg) no-repeat;
+        background-size: contain;
+        width: 85px;
+        background-position-y: 20px;
+        margin-left: 20px;
+        z-index: 10;
+      }
+      .mobile_logout {
+          display: inline-block;
+          line-height: 50px;
+          font-size: 13px;
+          color: red;
+          margin-right: 20px;
+      }
+      .header_infos {
+        display: none;
+      }
+      .header_infos .header_name {
+        display: table-cell;
+        width: 50%;
+        font-size: 14px;
+        color: #4d4f5c;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .header_infos .header_photo {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+      }
+      .header_infos .header_photo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+}
+
+@include desktop {
+    .section_header {
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 80px;
+      }
+      
+      .header_logo {
+        /* background: url(./img/AQOOM_logo.png) no-repeat; */
+        background: url(../../img/aqoom_beta_logo.svg) no-repeat;
+        background-size: contain;
+        width: 175px;
+        background-position-y: 20px;
+        margin-left: 20px;
+        z-index: 10;
+      }
+      .mobile_logout {
+          display: none;
+      }
+      .header_infos {
+        display: table;
+        width: 220px;
+      }
+      .header_infos .header_name {
+        display: table-cell;
+        width: 50%;
+        line-height: 80px;
+        font-size: 14px;
+        color: #4d4f5c;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .header_infos .header_photo {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+      }
+      .header_infos .header_photo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+}

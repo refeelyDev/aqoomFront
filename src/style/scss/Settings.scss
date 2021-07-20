@@ -1,0 +1,103 @@
+.setting_section {
+    .msg_success {
+        opacity: 0;
+        width: 300px;
+        height: 60px;
+        border-radius: 10px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        color: #1C62F9;
+        font-family: 'muli-bold';
+        font-size: 13px;
+        position: fixed;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 0.5s;
+        line-height: 30px;
+        text-align: center;
+        &.is_success {
+            opacity: 1;
+        }
+    }
+    .seg_title {
+        font-size: 34px;
+        margin: 0 0 30px 0;
+    }
+    .tz_setting {
+        background: #FCFCFC 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 20px #0000000D;
+        padding: 30px;
+        h4 {
+            font-family: 'muli-bold';
+            font-size: 22px;
+            color: #333132;
+            margin: 0 0 30px 0;
+        }
+        .tz_selection {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            span {
+                color: #8D8D8D;
+                font-size: 12px;
+                font-family: 'muli-bold';
+            }
+            .tz_picker {
+                width: 397px;
+                height: 34px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 10px;
+                margin-left: 20px;
+                position: relative;
+                a {
+                    color: #8D8D8D;
+                    font-size: 12px;
+                    line-height: 34px;
+                    margin: 0 10px;
+                    cursor: pointer;
+                }
+                .tz_lists {
+                    display: none;
+                    position: absolute;
+                    top: 35px;
+                    background-color: #FCFCFC;
+                    box-shadow: 0px 3px 6px #00000029;
+                    padding: 0 10px;
+                    overflow-y: scroll;
+                    height: 300px;
+                    z-index: 20;
+                    ::-webkit-scrollbar {
+                        display: none;
+                    }
+                    p {
+                        color: #8d8d8d;
+                        font-size: 14px;
+                        cursor: pointer;
+                        &:hover {
+                            color: #1C62F9;
+                        }
+                    }
+                    &.open {
+                        display: block;
+                    }
+                }
+            }
+            .tz_set_btn {
+                width: 74px;
+                height: 35px;
+                background: #1C62F9 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 18px;
+                color: white;
+                font-size: 14px;
+                margin-left: 20px;
+                text-align: center;
+                line-height: 34px;
+                cursor:pointer;
+            }
+        }
+    }
+}

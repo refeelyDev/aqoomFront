@@ -1,0 +1,118 @@
+.section_questions {
+    width: 90%;
+    margin: 20px 0 20px 40px;
+    .questions_content_wrap {
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px 0;
+        background: #fff;
+        .questions_content {
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            border: solid 0.5px #7f7f7f;
+            border-radius: 4px 0 0 4px;
+            box-sizing: border-box;
+            p {
+                line-height: 100px;
+                margin: 0;
+            }
+        }
+        .questions_username {
+            padding: 10px;
+            font-size: 14px;
+            border: solid 0.5px #7f7f7f;
+            height: 100px;
+            box-sizing: border-box;
+            border-left: none;
+            display: flex;
+            align-items: center;
+        }
+        .questions_info {
+            border: solid 0.5px #7f7f7f;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-left: none;
+            border-radius: 0 4px 4px 0;
+            p {
+                margin: 0;
+            }
+            .reply_btn {
+                color: #1C62F9;
+                font-weight: 900;
+                cursor: pointer;
+            }
+            .replied_date {
+                font-size: 12px;
+                color: #707070;
+            }
+        }
+    }
+}
+div[class^=reply_modal_] {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 244px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px #707070;
+    padding: 20px;
+    .modal_title {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    textarea {
+        width: 90%;
+        height: 90%;
+        margin: 10px auto;
+        resize: none;
+        border: none;
+        font-size: 14px;
+    }
+    .modal_btn_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        font-size: 14px;
+        .cancle_btn {
+            width: 100px;
+            height: 44px;
+            color: red;
+            cursor: pointer;
+        }
+        .submit_btn {
+            width: 100px;
+            height: 44px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+    }
+}
+
+div[class^=reply_modal_].active_modal {
+    display: flex;
+    flex-direction: column;
+    animation: FadeIn 0.5s ease-out;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

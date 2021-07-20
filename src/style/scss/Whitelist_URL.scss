@@ -1,0 +1,163 @@
+.section_whitelist {
+    width: 80%;
+    margin: 20px 0 20px 40px;
+    .section_title {
+        margin: 0;
+    }
+    .whitelist_label {
+        font-size: 0.7rem;
+        line-height: 1.4rem;
+    }
+    .input_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        input.whitelist_input {
+            width: 50%;
+            height: 30px;
+            text-align: center;
+            border-radius: 4px;
+            padding: 0 15px;
+        }
+        button.whitelist_register {
+            width: 100px;
+            height: 30px;
+            margin-left: 20px;
+            border: #1C62F9 solid 2px;
+            background: #1C62F9;
+            border-radius: 4px;
+            font-size: .9rem;
+            color: white;
+            cursor:pointer;
+            &:hover {
+                transform: translateY(1px);
+                box-shadow: #00196b 0px 0px 5px;
+            }
+        }
+    }
+    .table_title {
+        color: #333132;
+        font-size: 1rem;
+        margin: 40px 0 0;
+    }
+    .whitelist_tb {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 4px;
+        border: solid 1px #E2E2E3;
+        thead > tr {
+            background: #F9FAFB;
+            height: 40px;
+            th {
+                text-align: left;
+                padding-left: 20px;
+                &:nth-child(3), &:nth-child(4) {
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+        }
+        tbody > tr {
+            height: 40px;
+            
+            &:nth-child(2n) {
+                background: #FAFAFB;
+            }
+            td {
+                font-weight: normal;
+                border-bottom: solid 1px #E2E2E3;
+                text-align: left;
+                padding-left: 20px;
+                font-size: 0.8rem;
+                color: #000000CC;
+                &:nth-child(2):hover {
+                    color: rgb(3, 0, 175);
+                    text-decoration: underline;
+                    cursor:pointer;
+                }
+                &:nth-child(3) {
+                    padding: 0;
+                    text-align: center;
+                    color: #DE1717;
+                }
+                &:nth-child(4) {
+                    position: relative;
+                }
+            }
+            td > span.icon {
+                width: 18px;
+                height: 18px;
+                background-size: contain;
+                display: inline-block;
+                margin: 0 auto;
+            }
+            .delete_icon {
+                background: url('../../img/Icons/ic_delete_24px@2x.png') no-repeat;
+            }
+            .edit_icon {
+                background: url('../../img/edit.png') no-repeat;
+            }
+            .empty_item {
+                text-align: center;
+                color: #909090;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+        
+    }
+    .append_btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 1px 1px 20px #001f86;
+        border: solid 1px #003479;
+        right: 40px;
+        bottom: 40px;
+        font-size: 20px;
+        background: #00196b;
+        color: white;
+    }    
+    .disable_btn_wrap {
+        position: absolute;
+        top: 6px;
+        .filter_group {
+            .filter_label {
+                width: 49px;
+                height: 20px;
+                border-radius: 20px;
+                background: #707070;
+                position: absolute;
+                border: 1px solid #70707083;
+                transition: all 0.5s ease;
+            }
+            .filter_circle {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: linear-gradient(#ffffff, #FCFCFC);
+                border: solid 1px #DEDFDF;
+                box-shadow: 0px 1px 3px #0000001A;
+                position: absolute;
+                right: -23px;
+                top: 1px;
+                transition: transform 0.3s ease-out;
+            }
+            input {
+                width: 1px; height: 1px;
+                opacity: 0;
+                position: absolute;
+                &:checked + .filter_label {
+                    background: #2FC21D;
+                }
+                &:checked ~ .filter_circle {
+                    transform: translateX(25px);
+                }
+            }
+        }
+    }
+}
