@@ -83,7 +83,11 @@ class AnalysticMemberActivity extends React.Component {
     }
 
     makeTotalMsgChart(data, date_len) {
-        const date_to_format = document.querySelector('.date_to').innerText;
+        let date_to_format = document.querySelector('.date_to').innerText;
+        var temp = date_to_format.split('-');
+        if (temp[1].length != 2) {
+            date_to_format = date_to_format.replace('-'+temp[1]+'-', '-0'+temp[1]+'-')
+        }
         const today = new Date(date_to_format);
         let label_arr = [];
         let dataset = [],
@@ -94,7 +98,7 @@ class AnalysticMemberActivity extends React.Component {
 
         for (var i=date_len; i >= 0; i--) {
             const target_date = today - (86400000 * i);
-            const d = new Date(Number(target_date));
+            const d = new Date(target_date);
             const result = d.toString("MMMM dd").slice(4, 10)
             let is_matched = false,
                 is_matched_text = false,
