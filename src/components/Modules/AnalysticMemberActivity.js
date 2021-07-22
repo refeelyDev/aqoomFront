@@ -84,7 +84,7 @@ class AnalysticMemberActivity extends React.Component {
 
     makeTotalMsgChart(data, date_len) {
         const date_to_format = document.querySelector('.date_to').innerText;
-        const today = new Date(Number(ate_to_format));
+        const today = new Date(Number(date_to_format));
         let label_arr = [];
         let dataset = [],
             dataset_text = [],
