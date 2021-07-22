@@ -94,7 +94,7 @@ class AnalysticMemberActivity extends React.Component {
 
         for (var i=date_len; i >= 0; i--) {
             const target_date = today - (86400000 * i);
-            const d = new Date(target_date);
+            const d = new Date(Number(target_date));
             const result = d.toString("MMMM dd").slice(4, 10)
             let is_matched = false,
                 is_matched_text = false,
